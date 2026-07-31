@@ -6,6 +6,7 @@ function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error,setError]=useState(false)
+  const [loading,setLoading]=useState(false)
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("started");
@@ -16,6 +17,7 @@ function SignIn() {
         setError(false)
     }
     try {
+        setLoading(true)
       const response = await fetch(
         "https://serverless-api-teal.vercel.app/api/auth/signin",
         {
@@ -37,11 +39,16 @@ function SignIn() {
       }
 
       // Save token
-      console.log(data);
+      const token=data.data.token
+      const userData=data.data.user
+
+      console.log(token);
+      console.log(userData)
       // Redirect
     } catch (err) {
     } finally {
       console.log("ended");
+      setLoading(false)
     }
   };
   return (
@@ -86,7 +93,7 @@ function SignIn() {
             />
           </div>
 
-          <button className="signin-btn">Sign In</button>
+          <button className="signin-btn">{loading ?  "Signing In...":"Sign In"}</button>
         </form>
       </div>
     </div>
