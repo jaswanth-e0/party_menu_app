@@ -1,9 +1,17 @@
 import { useState } from "react";
-import "../SignIn.css";
+import "../CSSFiles/SignIn.css";
 import { FaUtensils } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useContext } from "react";
+import { AuthContext } from "./AuthContext";
 function SignIn() {
   const [email, setEmail] = useState("");
+  const { setIsAuthenticated } = useContext(AuthContext);
+  const navigate = useNavigate();
   const [password, setPassword] = useState("");
   const [error,setError]=useState(false)
   const [loading,setLoading]=useState(false)
@@ -15,7 +23,7 @@ function SignIn() {
     }
     else{
         setError(false)
-    }
+    
     try {
         setLoading(true)
       const response = await fetch(
@@ -41,16 +49,26 @@ function SignIn() {
       // Save token
       const token=data.data.token
       const userData=data.data.user
-
+      localStorage.setItem("party_menu_token",token)
+      localStorage.setItem("party_menu_user",JSON.stringify(userData))
+      setIsAuthenticated(true);
+      navigate("/menu");
       console.log(token);
       console.log(userData)
       // Redirect
     } catch (err) {
+      alert("User is not valid to access or Some thing went wrong")
     } finally {
       console.log("ended");
       setLoading(false)
-    }
+    }}
+      
   };
+  const token = localStorage.getItem("party_menu_token");
+
+if (token) {
+  return <Navigate to="/menu" replace />;
+}
   return (
     <div className="signin-bg d-flex justify-content-center align-items-center">
       <div className="signin-card shadow">

@@ -1,0 +1,172 @@
+.saved-bg{
+    min-height:100vh;
+    background:#0f0f13;
+    color:white;
+}
+
+.saved-title{
+    font-size:42px;
+    font-weight:700;
+    margin-bottom:4px;
+}
+
+.saved-count{
+    color:#8d8d9b;
+}
+
+.back-btn{
+    border:1px solid #313343;
+    color:white;
+    border-radius:10px;
+    padding:10px 20px;
+    background-color: #0f0f13;
+}
+
+
+
+.recipe-card{
+    background:#1b1c25;
+    border:1px solid #2b2d39;
+    border-radius:18px;
+    overflow:hidden;
+    transition:.3s;
+    height:100%;
+}
+
+.recipe-card:hover{
+    transform:translateY(-4px);
+}
+
+.recipe-image{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.recipe-body{
+    padding:18px;
+}
+
+.category{
+    color:#ff8a00;
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+.recipe-body h4{
+    font-size:28px;
+    margin-bottom:12px;
+}
+
+.description{
+    color:#9da0ad;
+    font-size:15px;
+    line-height:1.8;
+    min-height:72px;
+}
+
+.serves{
+    color:#8b8d97;
+}
+
+.diet-badge{
+    position:absolute;
+    top:14px;
+    right:14px;
+    font-size:12px;
+    font-weight:600;
+    padding:6px 12px;
+    border-radius:20px;
+}
+
+.veg{
+    background:#2f8f57;
+    color:white;
+}
+
+.nonveg{
+    background:#b32828;
+    color:white;
+}
+
+.remove-btn{
+    border:1px solid #cf4d5c;
+    color:#ff7886;
+    border-radius:10px;
+    background-color: orangered !important;
+}
+
+.remove-btn:hover {
+  color: white !important;
+  border-color: #cf4d5c !important;
+}
+.empty-state{
+    height:60vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.empty-state h3{
+    font-size:34px;
+}
+
+.empty-state p{
+    color:#8d8d9b;
+}
+
+@media(max-width:992px){
+
+.saved-title{
+    font-size:34px;
+}
+
+.recipe-image{
+    height:200px;
+}
+
+}
+
+@media(max-width:768px){
+
+.saved-title{
+    font-size:30px;
+}
+
+.back-btn{
+    margin-top:15px;
+    width:100%;
+}
+
+.recipe-body h4{
+    font-size:24px;
+}
+
+}
+
+@media(max-width:576px){
+
+.saved-bg{
+    padding:0 5px;
+}
+
+.saved-title{
+    font-size:28px;
+}
+
+.recipe-image{
+    height:190px;
+}
+
+.recipe-body{
+    padding:16px;
+}
+
+.description{
+    min-height:auto;
+}
+
+}

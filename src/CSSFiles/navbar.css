@@ -1,0 +1,45 @@
+.menu-navbar {
+    padding: 18px 0;
+}
+
+.navbar-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.nav-actions {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-btn {
+    white-space: nowrap;
+}
+
+@media (max-width: 425px) {
+
+    .navbar-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-actions {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 15px;
+        flex-direction: column;
+    }
+
+    .nav-btn {
+        width: 100%;
+    }
+
+    .logo {
+        font-size: 26px;
+    }
+
+    .welcome {
+        font-size: 14px;
+    }
+}

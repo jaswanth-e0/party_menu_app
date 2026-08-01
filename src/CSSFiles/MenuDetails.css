@@ -1,0 +1,259 @@
+.details-page{
+
+    min-height:100vh;
+    min-width: 100vw;
+    background:#101014;
+
+    color:white;
+
+}
+
+.detail-image{
+
+    width:500px;
+    height: 500px;
+    border-radius:18px;
+
+
+}
+
+.recipe-heading{
+
+    font-size:52px;
+
+    font-weight:700;
+
+    margin-top:20px;
+
+}
+
+.people{
+
+    color:#8f92a1;
+
+    font-size:20px;
+
+}
+
+.description{
+
+    color:#9fa1ad;
+
+    line-height:2;
+
+    font-size:20px;
+
+}
+
+.category-pill{
+
+    background:#4d2d14;
+
+    color:#ff7a00;
+
+    padding:8px 18px;
+
+    border-radius:20px;
+
+}
+
+.veg-pill{
+
+    background:#183c27;
+
+    color:#52d273;
+
+    padding:8px 18px;
+
+    border-radius:20px;
+
+}
+
+.nonveg-pill{
+
+    background:#4a1919;
+
+    color:#ff5b5b;
+
+    padding:8px 18px;
+
+    border-radius:20px;
+
+}
+
+.ingredients-card{
+
+    background:#1a1b25;
+
+    border-radius:18px;
+
+    padding:35px;
+
+}
+
+.ingredient-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#101014;
+
+    border:1px solid #2c2d38;
+
+    padding:18px 24px;
+
+    border-radius:12px;
+
+    margin-bottom:15px;
+
+}
+
+.save-btn{
+
+    background-color:#ff6a00;
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    padding:10px 20px;
+
+}
+
+.nav-btn{
+
+    border:1px solid #343648 !important;
+   
+    color:white;
+
+}
+.nav-btn:hover{
+    background-color: orangered !important;
+}
+@media (max-width:992px){
+
+    .recipe-heading{
+
+        font-size:38px;
+
+    }
+
+}
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.top-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+@media (max-width:768px){
+
+    .top-header{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .top-header > button{
+        width:100%;
+    }
+
+    .top-buttons{
+        display:flex;
+        gap:10px;
+        width:100%;
+    }
+
+    .top-buttons button{
+        flex:1;
+        min-width:140px;
+    }
+}
+
+@media (max-width:480px){
+
+    .top-buttons{
+        flex-direction:column;
+    }
+
+    .top-buttons button,
+    .top-header > button{
+        width:100%;
+    }
+}
+@media (max-width:768px){
+
+    .recipe-heading{
+
+        font-size:32px;
+
+    }
+
+    .ingredient-row{
+
+        padding:15px;
+
+        font-size:15px;
+
+    }
+
+    .details-page .d-flex{
+
+        flex-direction:column;
+
+        align-items:flex-start !important;
+
+    }
+
+}
+
+@media (max-width:576px){
+
+    .recipe-heading{
+
+        font-size:28px;
+
+    }
+
+    .description{
+
+        font-size:16px;
+
+        line-height:1.7;
+
+    }
+
+    .ingredients-card{
+
+        padding:20px;
+
+    }
+    .detail-image{
+
+    width:calc(100vw - 10vw);
+    height: 200px;
+
+
+}
+}
+.saved-btn {
+    background: transparent;
+    color: #48c78e;
+    border: 2px solid #2d7f61;
+    border-radius: 12px;
+    padding: 10px 22px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
