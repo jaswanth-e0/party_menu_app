@@ -28,7 +28,7 @@ function SignIn() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("started");
-    if (email.length == 0 || password.length == 0) {
+    if (email.length === 0 || password.length === 0) {
       setError(true);
     } else {
       setError(false);

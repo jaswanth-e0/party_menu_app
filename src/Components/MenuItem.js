@@ -9,7 +9,6 @@ import { FaCheck } from "react-icons/fa";
 function MenuItem() {
   const { id } = useParams();
 
-  const savedRecipes = JSON.parse(localStorage.getItem("party_menu_saved_recipes")) || [];
   const navigate = useNavigate();
   const [recipeSaved, setRecipeSaved] = useState(false);
   const recipe = menuData.find((item) => item.id === Number(id));

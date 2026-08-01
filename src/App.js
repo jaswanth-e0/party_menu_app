@@ -4,7 +4,7 @@ import MenuItem from './Components/MenuItem';
 import ProtectedRoute from './Components/ProtectedRoute';
 import SavedRecipes from './Components/SavedRecipes';
 import SignIn from './Components/SignIn';
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (

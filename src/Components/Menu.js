@@ -12,7 +12,6 @@ function Menu() {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("");
   const [diet, setDiet] = useState("");
-  const [isVeg, setIsVeg] = useState(null);
   const [data, setData] = useState(menuData);
   const [searchButton,setSearchButton]=useState(false)
   useEffect(() => {
@@ -37,31 +36,31 @@ function Menu() {
 
           <div className="mb-3 d-flex justify-content-start" style={{overflowX:"auto"}}>
             <button
-              className={`pill ${category == "" && "active"}`}
+              className={`pill ${category === "" && "active"}`}
               onClick={() => setCategory("")}
             >
               All
             </button>
             <button
-              className={`pill ${category == "starter" && "active"}`}
+              className={`pill ${category === "starter" && "active"}`}
               onClick={() => setCategory("starter")}
             >
               Starter
             </button>
             <button
-              className={`pill ${category == "main" && "active"}`}
+              className={`pill ${category === "main" && "active"}`}
               onClick={() => setCategory("main")}
             >
               Main
             </button>
             <button
-              className={`pill ${category == "sides" && "active"}`}
+              className={`pill ${category === "sides" && "active"}`}
               onClick={() => setCategory("sides")}
             >
               Sides
             </button>
             <button
-              className={`pill ${category == "desert" && "active"}`}
+              className={`pill ${category === "desert" && "active"}`}
               onClick={() => setCategory("desert")}
             >
               Dessert
@@ -72,19 +71,19 @@ function Menu() {
 
           <div className="mb-4 d-flex justify-content-start" style={{overflowX:"auto"}}>
             <button
-              className={`pill ${diet == "" && "active"}`}
+              className={`pill ${diet === "" && "active"}`}
               onClick={() => setDiet("")}
             >
               All
             </button>
             <button
-              className={`pill ${diet == "veg" && "active"}`}
+              className={`pill ${diet === "veg" && "active"}`}
               onClick={() => setDiet("veg")}
             >
               Veg
             </button>
             <button
-              className={`pill ${diet == "nonveg" && "active"}`}
+              className={`pill ${diet === "nonveg" && "active"}`}
               onClick={() => setDiet("nonveg")}
             >
               Non-Veg
