@@ -13,19 +13,19 @@ function Menu() {
   const [category, setCategory] = useState("");
   const [diet, setDiet] = useState("");
   const [data, setData] = useState(menuData);
-  const [searchButton,setSearchButton]=useState(false)
+  const [searchTerm, setSearchTerm] = useState("");
   useEffect(() => {
     setData(
       menuData
         .filter((item) =>
-          item.name.toLowerCase().includes(search.toLowerCase()),
+          item.name.toLowerCase().includes(searchTerm.toLowerCase()),
         )
         .filter((items) => items.category.includes(category))
         .filter((items) =>
           diet === "" ? true : diet === "veg" ? items.isVeg : !items.isVeg,
         ),
     );
-  }, [category, diet, searchButton]);
+  }, [category, diet, searchTerm]);
   return (
     <div className="menu-page">
       <Navbar />
@@ -104,7 +104,7 @@ function Menu() {
               <button
                 className="btn search-btn w-100"
                 style={{ backgroundColor: "orangered" }}
-                onClick={()=>setSearchButton((pre)=>!pre)}
+                onClick={()=>setSearchTerm(search)}
               >
                 Search
               </button>
